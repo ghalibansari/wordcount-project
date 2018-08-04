@@ -1,0 +1,14 @@
+<h1>count</h1>
+
+<form action="{% url 'home' %}">
+  <input type="submit" value="home"></input>
+</form>
+
+<h1>your text has {{count}} words</h1>
+{{fulltext}}
+
+<h1>word counts</h1>
+{% for word, count in sortedword %}
+{{word}} - {{count}}
+<br>
+{% endfor %}
